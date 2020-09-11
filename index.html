@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 5%;
+  border-radius: 0px;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+
+}
+
+iframe{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0px;
+}
+
+#Home {background-color: red;}
+#a {background-color: #B71BDF;}
+#b {background-color: #1B9ADF;}
+#c {background-color: #1BDF76;}
+#d {background-color: #5CDF1B;}
+#e {background-color: #DFDF1B;}
+#f {background-color: #0ED895;}
+#g {background-color: #5E95BA;}
+#h {background-color: #CC2DB7;}
+#i {background-color: #B71BDF;}
+#j {background-color: #DFDF1B;}
+#k {background-color: #1BDF76;}
+#l {background-color: #ED6F39;}
+#m {background-color: #32FF70;}
+#n {background-color: #FBF54E;}
+#o {background-color: #1B9ADF;}
+#p {background-color: #B71BDF;}
+#q {background-color: #CC2DB7;}
+#r {background-color: #ED6F39;}
+#s {background-color: #14E7E7;}
+#t {background-color: #72D119;}
+#u {background-color: #276CA8;}
+#v {background-color: #3F8503;}
+#w {background-color: #BB7505;}
+#x {background-color: #0082C9;}
+#y {background-color: #32FF70;}
+#z {background-color: #B71BDF;}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>
+<button class="tablink" onclick="openPage('a', this, '#B71BDF')" id="defaultOpen">a</button>
+<button class="tablink" onclick="openPage('b', this, '#1B9ADF')">b</button>
+<button class="tablink" onclick="openPage('c', this, '#1BDF76')">c</button>
+<button class="tablink" onclick="openPage('d', this, '#5CDF1B')">d</button>
+<button class="tablink" onclick="openPage('e', this, '#DFDF1B')">e</button>
+<button class="tablink" onclick="openPage('f', this, '#0ED895')">f</button>
+<button class="tablink" onclick="openPage('g', this, '#5E95BA')">g</button>
+<button class="tablink" onclick="openPage('h', this, '#CC2DB7')">h</button>
+<button class="tablink" onclick="openPage('i', this, '#B71BDF')">i</button>
+<button class="tablink" onclick="openPage('j', this, '#DFDF1B')">j</button>
+<button class="tablink" onclick="openPage('k', this, '#1BDF76')">k</button>
+<button class="tablink" onclick="openPage('l', this, '#ED6F39')">l</button>
+<button class="tablink" onclick="openPage('m', this, '#32FF70')">m</button>
+<button class="tablink" onclick="openPage('n', this, '#FBF54E')">n</button>
+<button class="tablink" onclick="openPage('o', this, '#1B9ADF')">o</button>
+<button class="tablink" onclick="openPage('p', this, '#B71BDF')">p</button>
+<button class="tablink" onclick="openPage('q', this, '#CC2DB7')">q</button>
+<button class="tablink" onclick="openPage('r', this, '#ED6F39')">r</button>
+<button class="tablink" onclick="openPage('s', this, '#14E7E7')">s</button>
+<button class="tablink" onclick="openPage('t', this, '#72D119')">t</button>
+<button class="tablink" onclick="openPage('u', this, '#276CA8')">u</button>
+<button class="tablink" onclick="openPage('v', this, '#3F8503')">v</button>
+<button class="tablink" onclick="openPage('w', this, '#BB7505')">w</button>
+<button class="tablink" onclick="openPage('x', this, '#0082C9')">x</button>
+<button class="tablink" onclick="openPage('y', this, '#32FF70')">y</button>
+<button class="tablink" onclick="openPage('z', this, '#B71BDF')">z</button>
+
+
+
+<div id="Home" class="tabcontent">
+  <h3>Home</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="a" class="tabcontent">
+    <iframe src="WEB/a.html" frameborder="0"></iframe>
+</div>
+
+<div id="b" class="tabcontent">
+    <iframe src="WEB/b.html" frameborder="0"></iframe>
+</div>
+
+<div id="c" class="tabcontent">
+    <iframe src="WEB/c.html" frameborder="0"></iframe>
+</div>
+
+<div id="d" class="tabcontent">
+    <iframe src="WEB/d.html" frameborder="0"></iframe>
+</div>
+
+<div id="e" class="tabcontent">
+    <iframe src="WEB/e.html" frameborder="0"></iframe>
+</div>
+
+<div id="f" class="tabcontent">
+    <iframe src="WEB/f.html" frameborder="0"></iframe>
+</div>
+
+<div id="g" class="tabcontent">
+    <iframe src="WEB/g.html" frameborder="0"></iframe>
+</div>
+
+<div id="h" class="tabcontent">
+    <iframe src="WEB/h.html" frameborder="0"></iframe>
+</div>
+
+<div id="i" class="tabcontent">
+    <iframe src="WEB/i.html" frameborder="0"></iframe>
+</div>
+
+<div id="j" class="tabcontent">
+    <iframe src="WEB/j.html" frameborder="0"></iframe>
+</div>
+
+<div id="k" class="tabcontent">
+    <iframe src="WEB/k.html" frameborder="0"></iframe>
+</div>
+
+<div id="l" class="tabcontent">
+    <iframe src="WEB/l.html" frameborder="0"></iframe>
+</div>
+
+<div id="m" class="tabcontent">
+    <iframe src="WEB/m.html" frameborder="0"></iframe>
+</div>
+
+<div id="n" class="tabcontent">
+    <iframe src="WEB/n.html" frameborder="0"></iframe>
+</div>
+
+<div id="o" class="tabcontent">
+    <iframe src="WEB/o.html" frameborder="0"></iframe>
+</div>
+
+<div id="p" class="tabcontent">
+    <iframe src="WEB/p.html" frameborder="0"></iframe>
+</div>
+
+<div id="q" class="tabcontent">
+    <iframe src="WEB/q.html" frameborder="0"></iframe>
+</div>
+
+<div id="r" class="tabcontent">
+    <iframe src="WEB/r.html" frameborder="0"></iframe>
+</div>
+
+<div id="s" class="tabcontent">
+    <iframe src="WEB/s.html" frameborder="0"></iframe>
+</div>
+
+<div id="t" class="tabcontent">
+    <iframe src="WEB/t.html" frameborder="0"></iframe>
+</div>
+
+<div id="u" class="tabcontent">
+    <iframe src="WEB/u.html" frameborder="0"></iframe>
+</div>
+
+<div id="v" class="tabcontent">
+    <iframe src="WEB/v.html" frameborder="0"></iframe>
+</div>
+
+<div id="w" class="tabcontent">
+    <iframe src="WEB/w.html" frameborder="0"></iframe>
+</div>
+
+<div id="x" class="tabcontent">
+    <iframe src="WEB/x.html" frameborder="0"></iframe>
+</div>
+
+<div id="y" class="tabcontent">
+  <iframe src="WEB/y.html" frameborder="0"></iframe>
+</div>
+
+<div id="z" class="tabcontent">
+  <iframe src="WEB/z.html" frameborder="0"></iframe>
+</div>
+
+
+
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
