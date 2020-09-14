@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rowword t0">
+        <div class="oneword">
+            <h2 class="eng">School</h2>
+            <h3 class="vie">Trường học</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+
+        <div class="oneword">
+            <h2 class="eng">You</h2>
+            <h3 class="vie">Bạn</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="rowword t1">
+        <div class="oneword">
+            <h2 class="eng">School</h2>
+            <h3 class="vie">Trường học</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+
+        <div class="oneword">
+            <h2 class="eng">You</h2>
+            <h3 class="vie">Bạn</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="rowword p2">
+        <div class="oneword">
+            <h2 class="eng">School</h2>
+            <h3 class="vie">Trường học</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+
+        <div class="oneword">
+            <h2 class="eng">You</h2>
+            <h3 class="vie">Bạn</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+    </div>
+
+    <div class="rowword t3">
+        <div class="oneword">
+            <h2 class="eng">School</h2>
+            <h3 class="vie">Trường học</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+
+        <div class="oneword">
+            <h2 class="eng">You</h2>
+            <h3 class="vie">Bạn</h3>
+            <h4 class="type">n</h4>
+            <div class="line"></div>
+        </div>
+    </div>
+</body>
+
+<style>
+    body{
+        overflow-x: hidden;
+    }
+    .rowword{
+        position: relative;
+        height: 80px;
+        width: auto;
+        background-color: midnightblue;
+        opacity: 0;
+    }
+        .rowword.t1{
+            animation: ditutraivao 100s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.t2{
+            animation: ditutraivao 100s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.t3{
+            animation: ditutraivao 100s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.t4{
+            animation: ditutraivao 100s;
+            animation-delay: 4s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.t0{
+            animation: ditutraivao 100s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.p1{
+            animation: dituphaivao 100s;
+            animation-delay: 1s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.p2{
+            animation: dituphaivao 100s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.p3{
+            animation: dituphaivao 100s;
+            animation-delay: 3s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.p4{
+            animation: dituphaivao 100s;
+            animation-delay: 4s;
+            animation-iteration-count: infinite;
+        }
+        .rowword.p0{
+            animation: dituphaivao 100s;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+        }
+
+    .oneword{
+        position: relative;
+        height: 100%;
+        width: auto;
+        float: left;
+        margin: 0px 20px;
+        text-align: center;
+        padding: 10px;
+    }
+    .line{
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: darkturquoise;
+        animation: thunho linear 2s;
+        animation-iteration-count: infinite;
+    }
+    @keyframes thunho{
+        0% { transform: scaleX(1); transform-origin: 0% ;}
+        50% { transform: scaleX(0); transform-origin: -100% ;}
+        100% { transform: scaleX(1); transform-origin: -100% ;}
+    }
+    @keyframes dituphaivao{
+        0% {transform: translateX(100%); opacity: 1;}
+        50% {transform: translateX(0); opacity: 1;}
+        100% {transform: translateX(100%); opacity: 1;}
+    }
+    @keyframes ditutraivao{
+        0% {transform: translateX(-100%); opacity: 1;}
+        50% {transform: translateX(0); opacity: 1;}
+        100% {transform: translateX(-100%); opacity: 1;}
+    }
+
+    .eng{
+        display: inline;
+        color: aliceblue;
+    }
+
+    .vie{
+        display: inline;
+        color: orange;
+    }
+    .vie::after{
+        content: ")";
+    }
+    .vie::before{
+        content: " - (";
+    }
+    .type{
+        display: inline;
+        color: aqua;
+    }
+    .type::before{
+        content: " /";
+    }
+    .type::after{
+        content: "/ ";
+    }
+</style>
+</html>
