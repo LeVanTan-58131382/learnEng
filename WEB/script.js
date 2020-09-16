@@ -89,28 +89,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Phần xử lý cho tab Từ
-    var listEng = document.querySelectorAll(".thoaiEng ");
-    var listVie = document.querySelectorAll(".thoaiVie ");
-    var listChildImg = document.querySelectorAll(".childimg ");
-    var listChamTron = document.querySelectorAll(".chamTron ");
+    var listEng = document.querySelectorAll(".thoaiEng");
+    var listVie = document.querySelectorAll(".thoaiVie");
+    var listChildImg = document.querySelectorAll(".childimg");
+    var listChamTron = document.querySelectorAll(".chamTron");
 
     for (var i = 0; i < listEng.length; i++) {
         listEng[i].onmouseenter = function() {
-            this.classList.add("anxuong ");
+            this.classList.add("anxuong");
         };
         listEng[i].onmouseleave = function() {
-            this.classList.remove("anxuong ");
+            this.classList.remove("anxuong");
         };
     }
 
     for (var i = 0; i < listChildImg.length; i++) {
         listChildImg[i].onmouseenter = function() {
             //this.nextSibling;
-            this.nextSibling.nextSibling.classList.add("toRa ");
+            this.nextSibling.nextSibling.classList.add("toRa");
         };
 
         listChildImg[i].onmouseleave = function() {
-            this.nextSibling.nextSibling.classList.remove("toRa ");
+            this.nextSibling.nextSibling.classList.remove("toRa");
         };
     }
 
