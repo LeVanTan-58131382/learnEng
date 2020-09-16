@@ -118,25 +118,27 @@
     </div>
 
     <div id="Paris" class="tabcontent">
-        <div class="cacTu">
-            <div id="option_1" class="motTu" style="font-size: 20px;">
-                <b style="color: darkslategrey;">Kiểu </b> <b style="color: rgb(8, 4, 255);">aaa</b>/bbb/ <b style="color: olive;">ccc</b>
+        <div class="thaotac">
+            <div class="nutthaotac" id="option_1">
+                <b style="color: darkslategrey;"></b> <b style="color: rgb(8, 4, 255);">aaa</b>/bbb/ <b style="color: olive;">ccc</b>
             </div>
-            <div id="option_2" class="motTu " style="font-size: 20px;">
-                <b style="color: darkslategrey;">Kiểu </b> <b style="color: rgb(255, 2, 2);">aaa</b>/bbb/ <b style="color: green;">ccc</b>
+            <div class="nutthaotac" id="option_2">
+                <b style="color: darkslategrey;"></b> <b style="color: rgb(255, 2, 2);">aaa</b>/bbb/ <b style="color: green;">ccc</b>
             </div>
-            <div id="option_3" class="motTu" style="font-size: 20px;">
-                <b style="color: darkslategrey;">Kiểu </b> <b style="color:rgb(161, 3, 182);">aaa</b>/bbb/ <b style="color: darkslategrey;">ccc</b>
+            <div class="nutthaotac" id="option_3">
+                <b style="color: darkslategrey;"></b> <b style="color:rgb(161, 3, 182);">aaa</b>/bbb/ <b style="color: darkslategrey;">ccc</b>
             </div>
-            <div id="option_4" class="motTu" style="font-size: 20px;">
+            <div class="nutthaotac" id="option_4">
                 <b style="color: darkslategrey;">Ẩn từ </b>
             </div>
-            <div id="option_5" class="motTu " style="font-size: 20px;">
+            <div class="nutthaotac" id="option_5">
                 <b style="color: darkslategrey;">Ẩn nghĩa </b>
             </div>
-            <div id="option_6" class="motTu" style="font-size: 20px;">
-                <b style="color: darkslategrey;">Xáo trộn </b>
+            <div class="nutthaotac" id="option_6">
+                <b style="color: darkslategrey;">Reset </b>
             </div>
+        </div>
+        <div class="cacTu">
             <div class="motTu ">
                 <b class="tu ">abandon (v)</b> /ə'bændən/ <b>bỏ, từ bỏ</b>
             </div>
@@ -1904,7 +1906,7 @@
     </div>
 
     <style>
-        .Hanoi {
+        /* .Hanoi {
             position: relative;
             height: 1200px;
             width: 1600px;
@@ -2114,100 +2116,153 @@
         
         #option_1,
         #option_2,
-        #option_3 {
+        #option_3,
+        #option_4,
+        #option_5,
+        #option_6 {
             cursor: pointer;
             text-align: center;
         }
         
         #option_1:hover,
         #option_2:hover,
-        #option_3:hover {
+        #option_3:hover,
+        #option_4:hover,
+        #option_5:hover,
+        #option_6:hover {
             background-color: aqua;
         }
+        
+        .thaotac {
+            position: fixed;
+            right: 1%;
+            top: 0px;
+            width: 85%;
+            height: 40px;
+            border-radius: 3px;
+            background-color: #474e5d;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            z-index: 10;
+        }
+        
+        .nutthaotac {
+            position: relative;
+            width: 135px;
+            height: 90%;
+            border-radius: 2px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            z-index: 11;
+            padding: 7px;
+        }
+        
+        .andi {
+            display: none;
+        } */
     </style>
 
     <script>
-        var listEng = document.querySelectorAll(".thoaiEng ");
-        var listVie = document.querySelectorAll(".thoaiVie ");
-        var listChildImg = document.querySelectorAll(".childimg ");
-        var listChamTron = document.querySelectorAll(".chamTron ");
+        // var listEng = document.querySelectorAll(".thoaiEng ");
+        // var listVie = document.querySelectorAll(".thoaiVie ");
+        // var listChildImg = document.querySelectorAll(".childimg ");
+        // var listChamTron = document.querySelectorAll(".chamTron ");
 
-        for (var i = 0; i < listEng.length; i++) {
-            listEng[i].onmouseenter = function() {
-                this.classList.add("anxuong ");
-            };
-            listEng[i].onmouseleave = function() {
-                this.classList.remove("anxuong ");
-            };
-        }
+        // for (var i = 0; i < listEng.length; i++) {
+        //     listEng[i].onmouseenter = function() {
+        //         this.classList.add("anxuong ");
+        //     };
+        //     listEng[i].onmouseleave = function() {
+        //         this.classList.remove("anxuong ");
+        //     };
+        // }
 
-        for (var i = 0; i < listChildImg.length; i++) {
-            listChildImg[i].onmouseenter = function() {
-                //this.nextSibling;
-                this.nextSibling.nextSibling.classList.add("toRa ");
-            };
+        // for (var i = 0; i < listChildImg.length; i++) {
+        //     listChildImg[i].onmouseenter = function() {
+        //         //this.nextSibling;
+        //         this.nextSibling.nextSibling.classList.add("toRa ");
+        //     };
 
-            listChildImg[i].onmouseleave = function() {
-                this.nextSibling.nextSibling.classList.remove("toRa ");
-            };
-        }
+        //     listChildImg[i].onmouseleave = function() {
+        //         this.nextSibling.nextSibling.classList.remove("toRa ");
+        //     };
+        // }
 
-        var listTuVungEng = document.getElementsByTagName("b");
-        for (var i = 0; i < listTuVungEng.length; i++) {
-            if (listTuVungEng[i].classList.contains("tu")) {
-                console.log(listTuVungEng[i]);
-                listTuVungEng[i].style.color = "red";
-                listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
-            }
-        }
+        // var listTuVungEng = document.getElementsByTagName("b");
+        // for (var i = 0; i < listTuVungEng.length; i++) {
+        //     if (listTuVungEng[i].classList.contains("tu")) {
+        //         console.log(listTuVungEng[i]);
+        //         listTuVungEng[i].style.color = "red";
+        //         listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
+        //     }
+        // }
 
-        var option_1 = document.getElementById("option_1");
-        var option_2 = document.getElementById("option_2");
-        var option_3 = document.getElementById("option_3");
+        // var option_1 = document.getElementById("option_1");
+        // var option_2 = document.getElementById("option_2");
+        // var option_3 = document.getElementById("option_3");
 
-        option_1.onclick = function() {
-            for (var i = 0; i < listTuVungEng.length; i++) {
-                if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
-                    listTuVungEng[i].style.color = "rgb(8, 4, 255)";
-                    listTuVungEng[i].nextSibling.nextSibling.style.color = "olive";
-                }
-            }
-        }
-        option_2.onclick = function() {
-            for (var i = 0; i < listTuVungEng.length; i++) {
-                if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
-                    listTuVungEng[i].style.color = "rgb(255, 2, 2)";
-                    listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
-                }
-            }
-        }
-        option_3.onclick = function() {
-            for (var i = 0; i < listTuVungEng.length; i++) {
-                if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
-                    listTuVungEng[i].style.color = "rgb(161, 3, 182)";
-                    listTuVungEng[i].nextSibling.nextSibling.style.color = "darkslategrey";
-                }
-            }
-        }
-        option_4.onclick = function() {
-            for (var i = 0; i < listTuVungEng.length; i++) {
-                if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
-                    listTuVungEng[i].innerHTML = "";
-                }
-            }
-        }
-        option_4.onclick = function() {
-            for (var i = 0; i < listTuVungEng.length; i++) {
-                if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
-                    listTuVungEng[i].innerHTML = "";
-                }
-            }
-        }
+        // option_1.onclick = function() {
+        //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //         if (listTuVungEng[i].classList.contains("tu")) {
+        //             console.log(listTuVungEng[i]);
+        //             listTuVungEng[i].style.color = "rgb(8, 4, 255)";
+        //             listTuVungEng[i].nextSibling.nextSibling.style.color = "olive";
+        //         }
+        //     }
+        // }
+        // option_2.onclick = function() {
+        //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //         if (listTuVungEng[i].classList.contains("tu")) {
+        //             console.log(listTuVungEng[i]);
+        //             listTuVungEng[i].style.color = "rgb(255, 2, 2)";
+        //             listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
+        //         }
+        //     }
+        // }
+        // option_3.onclick = function() {
+        //         for (var i = 0; i < listTuVungEng.length; i++) {
+        //             if (listTuVungEng[i].classList.contains("tu")) {
+        //                 console.log(listTuVungEng[i]);
+        //                 listTuVungEng[i].style.color = "rgb(161, 3, 182)";
+        //                 listTuVungEng[i].nextSibling.nextSibling.style.color = "darkslategrey";
+        //             }
+        //         }
+        //     }
+        //     // option_4.onclick = function() {
+        //     //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //     //         if (listTuVungEng[i].classList.contains("tu")) {
+        //     //             console.log(listTuVungEng[i]);
+        //     //             listTuVungEng[i].innerHTML = "";
+        //     //         }
+        //     //     }
+        //     // }
+        //     // option_5.onclick = function() {
+        //     //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //     //         if (listTuVungEng[i].classList.contains("tu")) {
+        //     //             console.log(listTuVungEng[i]);
+        //     //             listTuVungEng[i].nextSibling.nextSibling.innerHTML = "";
+        //     //         }
+        //     //     }
+        //     // }
+
+        // option_4.onclick = function() {
+        //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //         if (listTuVungEng[i].classList.contains("tu")) {
+        //             console.log(listTuVungEng[i]);
+        //             listTuVungEng[i].classList.toggle("andi");
+        //         }
+
+        //     }
+        // }
+        // option_5.onclick = function() {
+        //     for (var i = 0; i < listTuVungEng.length; i++) {
+        //         if (listTuVungEng[i].classList.contains("tu")) {
+        //             console.log(listTuVungEng[i]);
+        //             listTuVungEng[i].nextSibling.nextSibling.classList.toggle("andi");
+        //         }
+        //     }
+        // }
     </script>
 </body>
 
