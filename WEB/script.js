@@ -62,12 +62,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // thì phân tử ảnh đang active sẽ thay đổi, vì ban đầu khi kích vào một ảnh thì
     // thuTuAnhDangActive sẽ cố định ngay bức số 1 đó lun
     nutPhai.addEventListener("click", function() {
-        console.log("chuyển phải");
+        //console.log("chuyển phải");
         var phanTuHienTai = khoiCacAnh_Li[chiSoPhuHienTai];
 
         chiSoPhuHienTai = (chiSoPhuHienTai < khoiCacAnh_Li.length - 1) ?
             (chiSoPhuHienTai + 1) : 0;
-        console.log("chiSoPhuHienTai" + chiSoPhuHienTai);
+        //console.log("chiSoPhuHienTai" + chiSoPhuHienTai);
         var phanTuTiepTheo = khoiCacAnh_Li[chiSoPhuHienTai];
 
         phanTuHienTai.classList.remove("active");
@@ -75,12 +75,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     nutTrai.addEventListener("click", function() {
-        console.log("chuyển trái");
+        //console.log("chuyển trái");
         var phanTuHienTai = khoiCacAnh_Li[chiSoPhuHienTai];
 
         chiSoPhuHienTai = (chiSoPhuHienTai > 0) ?
             (chiSoPhuHienTai - 1) : khoiCacAnh_Li.length - 1;
-        console.log("chiSoPhuHienTai" + chiSoPhuHienTai);
+        //console.log("chiSoPhuHienTai" + chiSoPhuHienTai);
 
         var phanTuTiepTheo = khoiCacAnh_Li[chiSoPhuHienTai];
 
@@ -117,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function() {
     var listTuVungEng = document.getElementsByTagName("b");
     for (var i = 0; i < listTuVungEng.length; i++) {
         if (listTuVungEng[i].classList.contains("tu")) {
-            console.log(listTuVungEng[i]);
             listTuVungEng[i].style.color = "red";
             listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
         }
@@ -127,65 +126,66 @@ document.addEventListener("DOMContentLoaded", function() {
     var option_2 = document.getElementById("option_2");
     var option_3 = document.getElementById("option_3");
 
-    option_1.onclick = function() {
-        for (var i = 0; i < listTuVungEng.length; i++) {
-            if (listTuVungEng[i].classList.contains("tu")) {
-                console.log(listTuVungEng[i]);
-                listTuVungEng[i].style.color = "rgb(8, 4, 255)";
-                listTuVungEng[i].nextSibling.nextSibling.style.color = "olive";
-            }
-        }
-    }
-    option_2.onclick = function() {
-        for (var i = 0; i < listTuVungEng.length; i++) {
-            if (listTuVungEng[i].classList.contains("tu")) {
-                console.log(listTuVungEng[i]);
-                listTuVungEng[i].style.color = "rgb(255, 2, 2)";
-                listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
-            }
-        }
-    }
-    option_3.onclick = function() {
+    var textoption4 = document.querySelector("#option_4 b");
+    var textoption5 = document.querySelector("#option_5 b");
+
+    // nếu tab này dc mở
+    if (option_1) {
+        option_1.onclick = function() {
             for (var i = 0; i < listTuVungEng.length; i++) {
                 if (listTuVungEng[i].classList.contains("tu")) {
-                    console.log(listTuVungEng[i]);
+                    listTuVungEng[i].style.color = "rgb(8, 4, 255)";
+                    listTuVungEng[i].nextSibling.nextSibling.style.color = "olive";
+                }
+            }
+        }
+        option_2.onclick = function() {
+            for (var i = 0; i < listTuVungEng.length; i++) {
+                if (listTuVungEng[i].classList.contains("tu")) {
+                    listTuVungEng[i].style.color = "rgb(255, 2, 2)";
+                    listTuVungEng[i].nextSibling.nextSibling.style.color = "green";
+                }
+            }
+        }
+        option_3.onclick = function() {
+            for (var i = 0; i < listTuVungEng.length; i++) {
+                if (listTuVungEng[i].classList.contains("tu")) {
                     listTuVungEng[i].style.color = "rgb(161, 3, 182)";
                     listTuVungEng[i].nextSibling.nextSibling.style.color = "darkslategrey";
                 }
             }
         }
-        // option_4.onclick = function() {
-        //     for (var i = 0; i < listTuVungEng.length; i++) {
-        //         if (listTuVungEng[i].classList.contains("tu")) {
-        //             console.log(listTuVungEng[i]);
-        //             listTuVungEng[i].innerHTML = "";
-        //         }
-        //     }
-        // }
-        // option_5.onclick = function() {
-        //     for (var i = 0; i < listTuVungEng.length; i++) {
-        //         if (listTuVungEng[i].classList.contains("tu")) {
-        //             console.log(listTuVungEng[i]);
-        //             listTuVungEng[i].nextSibling.nextSibling.innerHTML = "";
-        //         }
-        //     }
-        // }
-
-    option_4.onclick = function() {
-        for (var i = 0; i < listTuVungEng.length; i++) {
-            if (listTuVungEng[i].classList.contains("tu")) {
-                console.log(listTuVungEng[i]);
-                listTuVungEng[i].classList.toggle("andi");
+        option_4.onclick = function() {
+            for (var i = 0; i < listTuVungEng.length; i++) {
+                if (listTuVungEng[i].classList.contains("tu")) {
+                    listTuVungEng[i].classList.toggle("andi");
+                    if (listTuVungEng[i].classList.contains("andi")) {
+                        textoption4.innerHTML = "Hiện từ";
+                    } else textoption4.innerHTML = "Ẩn từ";
+                }
             }
-
         }
-    }
-    option_5.onclick = function() {
-        for (var i = 0; i < listTuVungEng.length; i++) {
-            if (listTuVungEng[i].classList.contains("tu")) {
-                console.log(listTuVungEng[i]);
-                listTuVungEng[i].nextSibling.nextSibling.classList.toggle("andi");
+        option_5.onclick = function() {
+            for (var i = 0; i < listTuVungEng.length; i++) {
+                if (listTuVungEng[i].classList.contains("tu")) {
+                    listTuVungEng[i].nextSibling.nextSibling.classList.toggle("andi");
+                    if (listTuVungEng[i].nextSibling.nextSibling.classList.contains("andi")) {
+                        textoption5.innerHTML = "Hiện nghĩa";
+                    } else textoption5.innerHTML = "Ẩn nghĩa";
+                }
+
             }
         }
     }
 }, false)
+
+
+
+
+
+// Kiểm tra xem một chuỗi có bắt đầu với một chuỗi khác hay ko
+// var str = 'To be, or not to be, that is the question.';
+
+// console.log(str.startsWith('To be'));         // true
+// console.log(str.startsWith('not to be'));     // false
+// console.log(str.startsWith('not to be', 10)); // true

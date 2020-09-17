@@ -71,8 +71,9 @@
     <div class="tab">
         <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Ảnh</button>
         <button class="tablinks" onclick="openCity(event, 'Paris')">Từ</button>
+        <button class="tablinks" onclick="openCity(event, 'TPHCM')">Từ (2)</button>
         <button class="tablinks" onclick="openCity(event, 'Tokyo')">Câu</button>
-        <button class="tablinks" onclick="openCity(event, 'Hanoi')">Câu</button>
+        <button class="tablinks" onclick="openCity(event, 'Hanoi')">Câu (2)</button>
     </div>
 
     <div id="London" class="tabcontent">
@@ -1899,11 +1900,53 @@
                 <div class="thoaiVie ">
                     Chào mọi người! Tôi là một siêu anh hùng.
                 </div>
-
             </div>
+        </div>
+    </div>
+    <div id="TPHCM" class="tabcontent">
+        <div id="dad">
 
         </div>
     </div>
+    <style>
+        .eng,
+        .vie {
+            border: 10px solid #B71BDF;
+        }
+        
+        .eng {
+            border-bottom: none;
+        }
+        
+        .vie {
+            border-top: none;
+        }
+    </style>
+    <script>
+        // div TPHCM
+        var listTuVungEng = document.getElementsByTagName("b");
+        var divdad = document.getElementById("dad");
+        if (divdad) {
+            for (var i = 0; i < listTuVungEng.length; i++) {
+                if (listTuVungEng[i].classList.contains("tu")) {
+                    if (listTuVungEng[i].innerText.startsWith('a')) {
+                        listTuVungEng[i].innerText.replace("(n)", "<b>DANH TU</b>");
+                        var div = document.createElement("DIV");
+                        div.innerHTML = '<div class="chil"><div class="eng"><p>' +
+                            listTuVungEng[i].innerText
+                            .replace("(n)", "<i style = 'color : #80FF00'>(n)</i>")
+                            .replace("(v)", "<i style = 'color : #FFEB00'>(v)</i>")
+                            .replace("(adv)", "<i style = 'color : #00DEFF'>(adv)</i>")
+                            .replace("(adj)", "<i style = 'color : #FF4AF4'>(adj)</i>") +
+                            '</p></div><div class="vie"><p style="margin-top: 0px;">-------------------</p><p style="font-size: 15px; margin-bottom: 2px; color: white ">' +
+                            listTuVungEng[i].nextSibling.textContent + '</p><p style=" margin-top: 0px; ">' +
+                            listTuVungEng[i].nextSibling.nextSibling.innerText + '</p></p></div>';
+                        divdad.appendChild(div);
+                    }
+                }
+            }
+        }
+    </script>
 
     <style>
         /* .Hanoi {
