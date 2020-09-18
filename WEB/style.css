@@ -480,12 +480,13 @@ body {
     width: 200px;
     min-height: 50px;
     right: -30%;
-    transform: translateY(-130%) translateX(60%);
+    transform: translateY(-130%) translateX(50%);
     background-color: aliceblue;
     color: darkslategrey;
     border-radius: 3px;
     text-align: center;
     padding: 5px;
+    cursor: pointer;
 }
 
 .cham {
@@ -515,15 +516,26 @@ body {
 
 .thoaiEng {
     z-index: 9;
-}
-
-.thoaiEng.anxuong {
-    opacity: 0;
-    ;
+    opacity: 1;
+    visibility: visible;
 }
 
 .thoaiVie {
     z-index: 8;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.thoaiEng.anxuong {
+    z-index: 7;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.thoaiVie.hienlen {
+    z-index: 9;
+    opacity: 1;
+    visibility: visible;
 }
 
 @keyframes anhien {

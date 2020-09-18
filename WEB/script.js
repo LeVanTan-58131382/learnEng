@@ -93,13 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
     var listVie = document.querySelectorAll(".thoaiVie");
     var listChildImg = document.querySelectorAll(".childimg");
     var listChamTron = document.querySelectorAll(".chamTron");
-
+    var anxuong = 0;
     for (var i = 0; i < listEng.length; i++) {
-        listEng[i].onmouseenter = function() {
+        listEng[i].setAttribute("title", "click show Vie");
+        listVie[i].setAttribute("title", "click show Eng");
+
+        listEng[i].onclick = function() {
             this.classList.add("anxuong");
+            this.nextElementSibling.classList.add("hienlen");
         };
-        listEng[i].onmouseleave = function() {
-            this.classList.remove("anxuong");
+        listVie[i].onclick = function() {
+            this.previousElementSibling.classList.remove("anxuong");
+            this.classList.remove("hienlen");
         };
     }
 
